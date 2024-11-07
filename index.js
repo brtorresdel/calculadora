@@ -1,10 +1,11 @@
 let botoes = document.querySelectorAll('.botao');
-let tela = document.querySelector('#tela');
+let divCalculo = document.querySelector('#calculo');
+let divResultado = document.querySelector('#resultado');
 
 botoes.forEach(botao => {
     botao.addEventListener('click', () => {
         let n = botao.value;
-        tela.innerHTML = n;
+        divCalculo.innerHTML = n;
         console.log('Cliquei no botão ' + n);
     })
 })

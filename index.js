@@ -4,8 +4,29 @@ let divResultado = document.querySelector('#resultado');
 
 botoes.forEach(botao => {
     botao.addEventListener('click', () => {
-        let n = botao.value;
-        divCalculo.innerHTML = n;
-        console.log('Cliquei no botão ' + n);
+        switch(botao.value) {
+            case "C":
+                divCalculo.textContent = '';
+                divResultado.textContent = '';
+                break;
+
+            default:
+                divCalculo.textContent = botao.value;
+                divResultado.textContent = botao.value;
+                break;
+        }
     })
 })
+
+function operacao(a, b, op) {
+    switch (op) {
+        case '+':
+            return a + b;
+        case '-':
+            return a - b;
+        case '*':
+            return a * b;
+        case '/':
+            return a / b;
+    }
+}

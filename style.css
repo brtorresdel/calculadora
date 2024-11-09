@@ -54,12 +54,16 @@ body {
 }
 
 .calculo {
-    font-size: 2em
+    font-size: 2rem
 }
 
 .resultado {
-    font-size: 4em;
+    font-size: 4rem;
     font-weight: 700;
+}
+
+.vazio {
+    color: rgba(255,255,255, 0.5);
 }
 
 
@@ -85,7 +89,7 @@ body {
     align-items: center;
     font-size: 2em;
     border-radius: 0.4em;
-    box-shadow: 1px 1px 3px black;
+    box-shadow: 1.5px 1.5px 3px black;
 }
 
 .botao:hover {
@@ -97,6 +101,10 @@ body {
     background-color: rgba(135, 112, 254, 0.39);
     box-shadow: 1px 1px 5px black;
     transform: scale(0.9);
+}
+
+#operador {
+    background-color: rgba(100,80,205, 0.5);
 }
 
 

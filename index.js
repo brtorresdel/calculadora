@@ -1,26 +1,37 @@
 let botoes = document.querySelectorAll('.botao');
 let divCalculo = document.querySelector('#calculo');
 let divResultado = document.querySelector('#resultado');
-let a = '';
-let b = '';
+let n1 = 0;
+let n1a = 0;
+let n2 = 0;
+let n2a = 0;
 let op = '';
+let res = null;
+let operadores = ['+', '-', '*', '/'];
 
 botoes.forEach(botao => {
     botao.addEventListener('click', () => {
         switch(botao.value) {
             case "C":
                 divCalculo.innerHTML = '0';
+                divCalculo.value = "";
+
                 divResultado.innerHTML = '0';
-                divResultado.classList.add('vazio');
-                a = '';
-                b = '';
+                divResultado.value = "";
+
+                n1 = 0;
+                n2 = 0;
+                x = null;
+
                 break;
 
             case "=":
-                if (op !== '') {
-                    divResultado.innerHTML = operacao(a,b,op);
+                if (n1 !== '' && op !== '' && n2 !== '') {
+                    res = operacao(n1, n2, op);
+                    divResultado.innerHTML = res;
                     divResultado.classList.remove('vazio');
-                    divCalculo.innerHTML = 0;
+                    a = '';
+                    b = '';
                 }
                 break;
 
@@ -30,37 +41,32 @@ botoes.forEach(botao => {
     })
 })
 
-function operacao(n1, n2, op) {
+function operacao(x, y, op) {
     switch (op) {
         case '+':
-            return n1 + n2;
+            return x + y;
         case '-':
-            return n1 - n2;
+            return x - y;
         case '*':
-            return n1 * n2;
+            return x * y;
         case '/':
-            return n1 / n2;
+            return x / y;
     }
 }
 
 function addChar(n) {
-  if (divCalculo.innerHTML === '0') {
-    divCalculo.innerHTML = n;
-    return;
+  if (operadores.includes(n)) {
+
   } else {
-    if (/[+\-*/]/.test(n)) {
-      if (!/[+\-*/]/.test(divCalculo.innerHTML)) {
-        divCalculo.innerHTML += n;
-        op = n;
-        return;
-      }
+    if (!divCalculo.value) {
+      divCalculo.innerHTML = n;
+      a = n;
+      divCalculo.value = true;
     } else {
+      a = parseInt(a + n.toString());
       divCalculo.innerHTML += n;
-      if (!/[+\-*/]/.test(divCalculo.innerHTML)){a = a + n.toString()}
-      else {b = b + n.toString()}
     }
+    
   }
-  console.log(a);
-  console.log(b);
-  console.log(op);
+  
 }

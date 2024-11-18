@@ -12,34 +12,45 @@
 </head>
 <body>
     <div class="calculadora">
-        <div class="tela" id="tela">
-            <div class="calculo" id="calculo" value=''>0</div>
-            <div class="resultado vazio" id="resultado" value=''>0</div>
+        <div class="tela">
+            <div class="calculo">0</div>
+            <div class="resultado">0</div>
         </div>
-        <div class="linha">
-            <button class="botao" value=7>7</button>
-            <button class="botao" value=8>8</button>
-            <button class="botao" value=9>9</button>
-            <button class="botao" id="operador" value="/">/</button>
+        <div class="botoes">
+            <div class="operadores">
+                <button>+</button>
+                <button>-</button>
+                <button>*</button>
+                <button>/</button>
+            </div>
+            <div class="nOperadores">
+                <div class="numeros">
+                    <div class="linha">
+                        <button>9</button>
+                        <button>8</button>
+                        <button>7</button>
+                    </div>
+                    <div class="linha">
+                        <button>4</button>
+                        <button>5</button>
+                        <button>6</button>
+                    </div>
+                    <div class="linha">
+                        <button>1</button>
+                        <button>2</button>
+                        <button>3</button>
+                    </div>
+                    <div class="linha">
+                        <button>0</button>
+                        <button>.</button>
+                        <button>C</button>
+                    </div>
+                </div>
+                <button class="igual">=</button>
+            </div>
         </div>
-        <div class="linha">
-            <button class="botao" value=4>4</button>
-            <button class="botao" value=5>5</button>
-            <button class="botao" value=6>6</button>
-            <button class="botao" id="operador" value="*">*</button>
-        </div>
-        <div class="linha">
-            <button class="botao" value=1>1</button>
-            <button class="botao" value=2>2</button>
-            <button class="botao" value=3>3</button>
-            <button class="botao" id="operador" value="-">-</button>
-        </div>
-        <div class="linha">
-            <button class="botao" value=0>0</button>
-            <button class="botao" id="operador" value="C">C</button>
-            <button class="botao" id="operador" value="=">=</button>
-            <button class="botao" id="operador" value="+">+</button>
-        </div>
+        
+        
     </div>
 
     <script src="index.js"></script>

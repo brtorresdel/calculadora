@@ -71,6 +71,7 @@ body {
     max-width: 500px;
     min-width: 400px;
     height: 60%;
+    min-height: 800px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -105,12 +106,12 @@ body {
 .resultado {
     height: 55%;
     font-weight: bold;
-    font-size: 5em;
+    font-size: 4em;
     color: rgb(255,255,255);
 }
 
 .vazio {
-    opacity: 0.7;
+    opacity: 0.6;
 }
 
 
@@ -181,4 +182,8 @@ button:active {
 
 .igual:hover {
     transform: scale(1.05);
+}
+
+.igual:active {
+    transform: scale(0.95);
 }
